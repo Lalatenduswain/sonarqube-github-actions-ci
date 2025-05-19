@@ -40,72 +40,64 @@ Ensure the following are available on your system or self-hosted runner:
    cd sonarqube-github-actions-ci
 ````
 
-2. **Add GitHub Actions Workflow**
-   Place the `sonarqube.yml` file under `.github/workflows/` in your project repo.
+Add GitHub Actions Workflow
+Place the sonarqube.yml file under .github/workflows/ in your project repo.
 
-3. **Configure your GitHub secrets**
-   Go to:
-   `Settings` → `Secrets and variables` → `Actions` → Add:
+Configure your GitHub secrets
+Go to:
+Settings → Secrets and variables → Actions → Add:
 
-   * `SONAR_TOKEN`
-   * `SONAR_HOST_URL`
+SONAR_TOKEN
 
-4. **Customize your `sonar.projectKey` if needed**
+SONAR_HOST_URL
 
----
+Customize your sonar.projectKey if needed
 
-## 📂 GitHub Actions Workflow Explanation
-
-The core workflow file is: `.github/workflows/sonarqube.yml`
+📂 GitHub Actions Workflow Explanation
+The core workflow file is: .github/workflows/sonarqube.yml
 
 This GitHub Action automates the following steps:
 
-* Checks out code from the repo
-* Sets up Node.js (v22) for dependency installation
-* Installs Java 17 (required by SonarScanner CLI)
-* Caches and installs SonarScanner CLI
-* Adds the scanner to system PATH
-* Runs the SonarQube scan and uploads results to the specified server
+Checks out code from the repo
 
----
+Sets up Node.js (v22) for dependency installation
 
-## ⚙️ Script Explanation
+Installs Java 17 (required by SonarScanner CLI)
 
-+ScriptName = **sonarqube-github-actions-ci**
+Caches and installs SonarScanner CLI
+
+Adds the scanner to system PATH
+
+Runs the SonarQube scan and uploads results to the specified server
+
+⚙️ Script Explanation
++ScriptName = sonarqube-github-actions-ci
 
 This workflow script:
 
-* Reduces repeated downloads using GitHub's cache action
-* Is CI/CD-friendly for JS/TS/Node.js applications
-* Allows easy customization and integration into mono-repos or microservices architecture
+Reduces repeated downloads using GitHub's cache action
 
-📁 **Workflow File Location**:
-`.github/workflows/sonarqube.yml`
+Is CI/CD-friendly for JS/TS/Node.js applications
 
----
+Allows easy customization and integration into mono-repos or microservices architecture
 
-## 🧪 Disclaimer | Running the Script
+📁 Workflow File Location:
+.github/workflows/sonarqube.yml
 
-**Author:** Lalatendu Swain
-🌐 [GitHub](https://github.com/Lalatenduswain) | [Website](https://blog.lalatendu.info/)
+🧪 Disclaimer | Running the Script
+Author: Lalatendu Swain
+🌐 GitHub | Website
 
 This script is provided as-is and may require modifications or updates based on your specific environment and requirements.
 Use it at your own risk. The authors of the script are not liable for any damages or issues caused by its usage.
 
----
-
-## 💖 Support & Donations
-
+💖 Support & Donations
 If you find this project helpful, feel free to show your support:
-☕ [Buy Me a Coffee](https://www.buymeacoffee.com/lalatendu.swain)
+☕ Buy Me a Coffee
 
----
-
-## 🛟 Support or Contact
-
+🛟 Support or Contact
 Encountering issues? Don't hesitate to:
 
-* Submit an issue: [GitHub Issues](https://github.com/Lalatenduswain/sonarqube-github-actions-ci/issues)
-* Mention your environment setup and logs for faster assistance
+Submit an issue: GitHub Issues
 
----
+Mention your environment setup and logs for faster assistance
